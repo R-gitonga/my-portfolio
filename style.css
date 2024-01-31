@@ -5,11 +5,14 @@
 
 body {
     min-height: 100vh;
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.index-body {
     background-image: url(assets/laptop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -24,6 +27,8 @@ body {
     width: 270px;
 }
 .brand_container img {
+    max-width: 100%;
+    height: auto;
     margin: auto;
     display: block;
 }
@@ -58,6 +63,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 0;
 }
@@ -75,7 +81,8 @@ body {
     font-weight: bold;
     padding: 10px;
     display: block;
-    width: fit-content;
+    width: max-content;
+    margin: auto;
 }
 .nav-link:hover {
     /* background-color: #fff; */
@@ -109,11 +116,12 @@ p {
 }
 
 .skills-container:hover #skills-display {
+    cursor: pointer;
     color: #3498db;
     transform: scale(1.2); 
   }
   
-  #skills-display {
+#skills-display {
     font-size: 24px;
     font-weight: bold;
     background: linear-gradient(45deg, #3498db, #6495ed, #f0f8ff, #fff);
@@ -151,7 +159,8 @@ a {
     color: black;
 }
 a.contact:hover {
-    color: #f5f5f5;
+    color: black;
+    font-family: cursive Verdana, Geneva, Tahoma, sans-serif;
     transform: scale(1.5);
 }
 .contact-button a {
@@ -201,7 +210,152 @@ a.contact:hover {
     background-color: #6495ed;
     transform: translateY(0);
 }
-
-@media (max-width: 576px) {
-
+.mobile-menu-button { 
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
+
+.mobile-menu-button img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+    }
+    p {
+        margin: auto;
+        position: absolute;
+        margin-bottom: 80px;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bolder;
+        color: #f0f8ff;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
+    .skills-container {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        margin: auto;
+        padding-top: 100px;
+        color: #f0f8ff;
+    }
+    .contact-button {
+        width: fit-content;
+        text-align: center;
+        position: absolute;
+        margin: auto;
+        margin-top: 200px;
+        padding-top: 10px;
+    }
+    .container {
+        width: 100%;
+    }
+    .brand_container{
+        height: fit-content;
+        width: auto;
+        background-color: #6495ed;
+    }
+
+    .brand_container img {
+        height: 42px;
+        width: 42px;
+        margin-left: 0;
+    }
+    .navbar ul {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+    .navbar ul.active {
+        transform: translateY(0);
+        top: 0;
+    }
+    .nav-link.active {
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    .navbar, .navbar ul {
+        display: none;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .navbar.active, .navbar ul{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .navbar.active a {
+        width: 100%;
+    }
+    .navbar.active .nav-link{
+        background: linear-gradient(45deg, #ffffffb3, #6495ed, #f0f8ff, #3498db);
+        font-size: 20px;
+        transform: translateY(10px);
+
+        }
+
+
+    .mobile-menu-button {
+        top: 0;
+        right: 0;
+        bottom: 0px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        display: block;
+        height: fit-content;
+    }
+    .mobile-menu-button img {
+        height: 50px;
+        width: 35;
+        display: flex;
+    }
+}
+
+
+
+/* About us pages CSS */
+.about-container {
+    position: absolute;
+    display: flex;
+    width: 100vh;
+    height: 600px;
+    background-color: #008000;
+    margin-left: 25%;
+    margin-top: 125px;
+    top: 0;
+    
+}
+.profile-picture{
+    background-color: white;
+    height: 40px;
+    width: 35px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 25%;
+}
+
+.description {
+    background-color: #3498db;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 25%;
+}
+

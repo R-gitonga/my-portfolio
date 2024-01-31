@@ -8,6 +8,9 @@ function displaySkills () {
 
 displaySkills();
 setInterval(displaySkills, 4000);
+
+
+
 // contact me animation
 // get element by ID, define text to display and the delay
 const contactButton = document.getElementById("contactButton");
@@ -31,10 +34,16 @@ function typeText(index) {
 typeText(0);
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarToggler = document.querySelector(".mobile-menu-button");
     const navbarList = document.querySelector(".navbar ul");
 
     navbarToggler.addEventListener('click', function() {
         navbarList.classList.toggle('active');
     });
 });
+
+
+function toggleMobileMenu() {
+    var navMenu = document.querySelector('.navbar');
+    navMenu.classList.toggle('active');
+}
